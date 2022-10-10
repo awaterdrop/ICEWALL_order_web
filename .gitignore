@@ -92,4 +92,4 @@ fabric.properties
 # End of https://www.toptal.com/developers/gitignore/api/jetbrains+all
 
 venv/
-./secrets.json
+secrets.json
