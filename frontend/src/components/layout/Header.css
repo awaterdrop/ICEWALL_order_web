@@ -1,0 +1,24 @@
+.header{
+    height:100px;
+    display: flex;
+    align-items: center;
+    background-color: whitesmoke;
+    position: sticky;
+    top: 0;2
+    z-index:100;
+}
+
+.header_logo{
+    width: 100px;
+    object-fit: contain;
+    margin: 0 20px;
+}
+
+.header_title{
+    font-size: 1.5em;
+    font-weight: bold;
+    letter-spacing: 0.5em;
+    color: black;
+    text-align: center;
+
+}
