@@ -1,0 +1,39 @@
+{% block content %}
+<html>
+    <head>
+    </head>
+
+    <body>
+        <h1>회원가입 페이지</h1><br>
+        <div>
+            <form method="post" action="{% url 'signup' %}">
+                {% csrf_token %}
+
+                {% if form.errors %}
+                    {% for field in form %}
+                        {% for error in field.errors %}  <!-- field error -->
+                            <strong>{{ field.label }}</strong>
+                            {{ error }}
+                        {% endfor %}
+                    {% endfor %}
+                    {% for error in form.non_field_errors %}   <!-- None field error -->
+                        <strong>{{ error }}</strong>
+                    {% endfor %}
+                {% endif %}
+
+                <h4>이름 : </h4>
+                <input type="text" name="username" value="{{ form.username.value|default_if_none:'' }}">
+                <h4>비밀번호 : </h4>
+                <input type="password" name="password1" value="{{ form.password1.value|default_if_none:'' }}">
+                <h4>비밀번호 확인 : </h4>
+                <input type="password" name="password2" value="{{ form.password2.value|default_if_none:'' }}">
+                <h4>이메일 : </h4>
+                <input type="email" name="email" value="{{ form.email.value|default_if_none:'' }}">
+
+                <button type="submit">제출</button>
+            </form>
+        </div>
+    </body>
+</html>
+
+{% endblock %}
