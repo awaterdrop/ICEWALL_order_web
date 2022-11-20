@@ -10,11 +10,6 @@ function Header() {
   return (
     <div className="header">
       <button onClick={clickHeader} className="header_btn">
-        {/*<img*/}
-        {/*  className="header_logo"*/}
-        {/*  src="https://www.hanyang.ac.kr/documents/20182/73809/HYU_logo_singlecolor_png.png/b8aabfbe-a488-437d-b4a5-bd616d1577da?t=1474070795276"*/}
-        {/*  alt="my image"*/}
-        {/*/>*/}
         <AiOutlineHome className="homeIcon" />
       </button>
 

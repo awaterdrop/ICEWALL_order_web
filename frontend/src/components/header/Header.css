@@ -32,6 +32,7 @@
     font-size: 1.5em;
     font-weight: bold;
     color: black;
+    display: flex;
     text-align: center;
 
 }
