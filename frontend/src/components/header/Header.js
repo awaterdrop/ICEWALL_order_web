@@ -21,7 +21,7 @@ function Header() {
       <pr />
       <div className="header_title">
         Hanyang Univ.
-        <br /> Computer Software 주점
+        <br /> CSE 주점
       </div>
     </div>
   );

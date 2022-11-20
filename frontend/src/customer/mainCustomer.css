@@ -1,16 +1,18 @@
 @import url('https://fonts.googleapis.com/css2?family=Black+Han+Sans&display=swap');
-.mainCustomer_logo{
-    width:150px;
-    object-fit: contain;
-    margin: 0 20px;
-    align-items: center;
-    position:fixed;
-    top :30px;
-    left:120px;
+
+.mainCustomer{
+    text-align: center;
   }
+
+.customerLogo{
+    width:30%;
+    margin: 10px auto;
+}
+
 body{
     background-color : azure;
 }
+
 .menu{
     align-items: center;
     border:0;
