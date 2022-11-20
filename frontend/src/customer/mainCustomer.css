@@ -1,0 +1,43 @@
+@import url('https://fonts.googleapis.com/css2?family=Black+Han+Sans&display=swap');
+.mainCustomer_logo{
+    width:150px;
+    object-fit: contain;
+    margin: 0 20px;
+    align-items: center;
+    position:fixed;
+    top :30px;
+    left:120px;
+  }
+body{
+    background-color : azure;
+}
+.menu{
+    align-items: center;
+    border:0;
+    height: 15%;
+    width: 70%;
+    background-color: lightgray;
+    justify-content: center;
+    cursor: pointer;
+    border-radius: 20%;
+    margin-top: 50px;
+    display: flex;
+    position:Absolute;
+    top: 240px;
+    left :15%;
+
+}
+
+.receipt{
+    align-items: center;
+    border:0;
+    height:15%;
+    width: 70%;
+    background-color: lightgray;
+    justify-content: center;
+    cursor: pointer;
+    border-radius: 20%;
+    position:Absolute;
+    top: 490px;
+    left:15%
+}

@@ -1,0 +1,36 @@
+.header{
+    height:100px;
+    display: flex;
+    align-items: center;
+    background-color: whitesmoke;
+    position: sticky;
+    top: 0;
+
+}
+.header_btn{
+    cursor:pointer;
+    border:0;
+    outline:0;
+    background-color: whitesmoke;
+}
+/*.header_logo{*/
+/*    width:70px;*/
+/*    object-fit: contain;*/
+/*    margin: 0 20px;*/
+/*}*/
+.homeIcon{
+    width:70px;
+    height:100%;
+    object-fit: contain;
+    margin: 0 20px;
+    background-color:whitesmoke;
+    color:darkblue;
+}
+
+.header_title{
+    font-size: 1.5em;
+    font-weight: bold;
+    color: black;
+    text-align: center;
+
+}
