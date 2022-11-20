@@ -21,6 +21,7 @@ function MainCustomer() {
         style={{
           textAlign: "center",
           position: "relative",
+
           top: "180px",
           fontFamily: "Black Han Sans",
         }}
