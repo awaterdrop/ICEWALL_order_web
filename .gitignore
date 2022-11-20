@@ -98,3 +98,6 @@ secrets.json
 *.pyc
 __pychache__/
 
+backend/media/
+
+migrations/
