@@ -5,19 +5,31 @@
     background-color: whitesmoke;
     position: sticky;
     top: 0;
-    z-index:100;
-}
 
-.header_logo{
-    width: 100px;
+}
+.header_btn{
+    cursor:pointer;
+    border:0;
+    outline:0;
+    background-color: whitesmoke;
+}
+/*.header_logo{*/
+/*    width:70px;*/
+/*    object-fit: contain;*/
+/*    margin: 0 20px;*/
+/*}*/
+.homeIcon{
+    width:70px;
+    height:100%;
     object-fit: contain;
     margin: 0 20px;
+    background-color:whitesmoke;
+    color:darkblue;
 }
 
 .header_title{
     font-size: 1.5em;
     font-weight: bold;
-    letter-spacing: 0.5em;
     color: black;
     text-align: center;
 

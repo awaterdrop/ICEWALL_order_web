@@ -5,8 +5,9 @@ const Footer = () => {
   const yearTxt = currentYear === 2022 ? "2022" : "2022 - " + currentYear;
 
   return (
-    <footer class="m_footer">
-      <p>© {yearTxt} Service - Developed by ICEWALL_WEB_6조</p>
+    <footer className="footer">
+      <p>© {yearTxt} Service - Developed by ICEWALL__6조</p>
+      <address>Contact webmaster for more information. 010-9879-1510</address>
     </footer>
   );
 };
