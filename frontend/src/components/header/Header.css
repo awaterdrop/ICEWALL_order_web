@@ -1,9 +1,10 @@
 .header{
     height:100px;
+    width : 100%;
     display: flex;
     align-items: center;
     background-color: whitesmoke;
-    position: sticky;
+    position: fixed;
     top: 0;
 
 }
