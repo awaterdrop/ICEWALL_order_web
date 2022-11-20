@@ -1,6 +1,6 @@
 import Footer from "../components/footer/Footer";
 import Header from "../components/header/Header";
-function Food() {
+function Drink() {
   return (
     <div>
       <Header />
@@ -8,4 +8,4 @@ function Food() {
     </div>
   );
 }
-export default Food;
+export default Drink;
