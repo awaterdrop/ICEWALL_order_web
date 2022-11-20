@@ -93,3 +93,8 @@ fabric.properties
 
 venv/
 secrets.json
+
+# python cahce files
+*.pyc
+__pychache__/
+
