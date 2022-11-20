@@ -16,7 +16,7 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import path
 from django.contrib.auth import views as auth_views
-from login import views
+from user import views
 
 app_name = 'login'
 urlpatterns = [
