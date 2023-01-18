@@ -7,8 +7,6 @@ function App() {
     <Router>
       <Routes>
         <Route path="/">
-          console.log("hi");
-          <Header />
           <MainCustomer />
         </Route>
 
