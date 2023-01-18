@@ -10,21 +10,40 @@ import Receipt from "./customer/receipt";
 import Food from "./customer/food";
 import Drink from "./customer/drink";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import { BrowserView, MobileView } from "react-device-detect";
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
-  <Router>
-    <Routes>
-      <Route path="/" element={<MainCustomer />}></Route>
+  <div>
+    <BrowserView>
+      <Router>
+        <Routes>
+          <Route path="/" element={<MainCustomer />}></Route>
 
-      <Route path="/menu" element={<Menu />}></Route>
+          <Route path="/menu" element={<Menu />}></Route>
 
-      <Route path="/receipt" element={<Receipt />}></Route>
-      <Route path="/menu/food" element={<Food />}></Route>
-      <Route path="/menu/drink" element={<Drink />}></Route>
-      <Route path="/receipt" element={<Receipt />}></Route>
-    </Routes>
-  </Router>
+          <Route path="/receipt" element={<Receipt />}></Route>
+          <Route path="/menu/food" element={<Food />}></Route>
+          <Route path="/menu/drink" element={<Drink />}></Route>
+          <Route path="/receipt" element={<Receipt />}></Route>
+        </Routes>
+      </Router>
+    </BrowserView>
+    <MobileView>
+      <Router>
+        <Routes>
+          <Route path="/" element={<MainCustomer />}></Route>
+
+          <Route path="/menu" element={<Menu />}></Route>
+
+          <Route path="/receipt" element={<Receipt />}></Route>
+          <Route path="/menu/food" element={<Food />}></Route>
+          <Route path="/menu/drink" element={<Drink />}></Route>
+          <Route path="/receipt" element={<Receipt />}></Route>
+        </Routes>
+      </Router>
+    </MobileView>
+  </div>
 );
 
 // If you want to start measuring performance in your app, pass a function
