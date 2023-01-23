@@ -16,18 +16,7 @@ const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
   <div>
     <BrowserView>
-      <Router>
-        <Routes>
-          <Route path="/" element={<MainCustomer />}></Route>
-
-          <Route path="/menu" element={<Menu />}></Route>
-
-          <Route path="/receipt" element={<Receipt />}></Route>
-          <Route path="/menu/food" element={<Food />}></Route>
-          <Route path="/menu/drink" element={<Drink />}></Route>
-          <Route path="/receipt" element={<Receipt />}></Route>
-        </Routes>
-      </Router>
+      <Router></Router>
     </BrowserView>
     <MobileView>
       <Router>
