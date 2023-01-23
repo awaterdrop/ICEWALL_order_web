@@ -8,14 +8,16 @@ function Food({ id, image, name, price}) {
         <div className="food_img">
             <img src ={image} alt=""/>
         </div>
-      <div className="food_info">
-        <p>{name}</p>
-        <p className="food_price">
-          <small>가격</small>
-          <strong>{price}</strong>
-          <small>원</small>
-        </p>
-      </div>
+        <div text="text">
+            <div className="food_info">
+                <p className="food_name">{name}</p>
+                <p className="food_price">
+                    <small>가격</small>
+                    <strong>{price}</strong>
+                    <small>원</small>
+                </p>
+            </div>
+        </div>
     </div>
   );
 }
