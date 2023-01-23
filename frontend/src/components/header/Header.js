@@ -6,13 +6,13 @@ function Header() {
   return (
     <div className="header">
       <Link to="/">
-        <AiOutlineHome className="home_icon" />
+        <img
+          class="home_icon"
+          src="https://www.hanyang.ac.kr/documents/20182/73809/HYU_characterMark_basic.png/eec1b339-07cf-41d9-aa4e-87590fea02fe?t=1474077517108"
+          alt=""
+        />
       </Link>
-      <div className="header_title">
-        <h2>Hanyang Univ CSE 주점</h2>
-      </div>
     </div>
   );
 }
-
 export default Header;
