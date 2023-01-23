@@ -11,24 +11,17 @@
     background-color: white;
     z-index: 1;
 }
-.food>img{
-    max-height:200px;
-    width :100%;
-    object-fit: contain;
-    margin-bottom: 15px;
-}
-.food>button{
-    background-color:white;
-    border: 2px #1c2b6f solid;
-    border-radius:20%;
-    margin-top: 10px;
-
-}
-.button_container{
+/*.food>img{*/
+/*    max-height:200px;*/
+/*    width :100%;*/
+/*    object-fit: contain;*/
+/*    margin-bottom: 15px;*/
+/*}*/
+.food_img{
+    width: 100px;
+    height: 10%;
     display: flex;
-    flex-direction: row;
-}
-.button_container>button{
-    background-color:white;
-    border-radius:20%;
+    align-items: center;
+    justify-items: center;
+    object-fit: contain;
 }
