@@ -1,23 +1,38 @@
 .header{
-    height:80px;
-    width : 120%;
+    height:100px;
+    width : 100%;
     display: flex;
-    justify-content: center;
     align-items: center;
-    position: sticky;
+    background-color: whitesmoke;
+    position: fixed;
     top: 0;
-    z-index:100;
-    background-color: black;
+
 }
-.home_icon{
+.header_btn{
     cursor:pointer;
-    color:white;
-    width:80%;
-    height:70px;
-    margin-left:20px;
+    border:0;
+    outline:0;
+    background-color: whitesmoke;
 }
+/*.header_logo{*/
+/*    width:70px;*/
+/*    object-fit: contain;*/
+/*    margin: 0 20px;*/
+/*}*/
+.homeIcon{
+    width:70px;
+    height:100%;
+    object-fit: contain;
+    margin: 0 20px;
+    background-color:whitesmoke;
+    color:darkblue;
+}
+
 .header_title{
-    width:100%;
-    margin-left:30px;
-    color:white;
+    font-size: 1.5em;
+    font-weight: bold;
+    color: black;
+    display: flex;
+    text-align: center;
+
 }
