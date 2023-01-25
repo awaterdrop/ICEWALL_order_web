@@ -15,7 +15,7 @@
 /*    min-width: 100%;*/
 /*    min-height: 100%;*/
 /*}*/
-.food_img>img{
+.food_img{
     display: block;
     max-height:200px;
     width : 100px;
