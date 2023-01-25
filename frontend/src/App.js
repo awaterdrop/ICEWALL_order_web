@@ -7,6 +7,7 @@ import Drink from "./customer/drink";
 import Detail from "./customer/detail";
 import React, { useState } from "react";
 import Data from "./customer/data";
+import Cart from "./customer/cart";
 
 function App() {
   const [products, setProduct] = useState(Data);
@@ -23,6 +24,7 @@ function App() {
           path="/detail/:id"
           element={<Detail products={products} />}
         ></Route>
+        <Route path="/cart" element={<Cart products={products} />}></Route>
       </Routes>
     </Router>
   );

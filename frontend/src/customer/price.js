@@ -1,9 +1,8 @@
 import React, { useState } from "react";
-import "./food.css";
 import { Link } from "react-router-dom";
-function Food({ product }) {
+function Price({ product }) {
   const [value, setValue] = useState(0);
-  const { id, name, price, image, amount } = product;
+  const { id, name, price, image, amount, totalPrice } = product;
 
   return (
     <div className="food">
@@ -16,9 +15,10 @@ function Food({ product }) {
           <p className="food_name">{name}</p>
           <p className="food_price">
             <small>가격</small>
-            <strong>{price}</strong>
-            <small>원</small>
-            <small>수량 {amount}</small>
+            <strong>{totalPrice}</strong>
+            <small>원 </small>
+            <small>수량 </small>
+            <small>{amount}</small>
           </p>
         </div>
       </div>
@@ -26,4 +26,4 @@ function Food({ product }) {
   );
 }
 
-export default Food;
+export default Price;
