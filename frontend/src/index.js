@@ -8,6 +8,7 @@ import reportWebVitals from "./reportWebVitals";
 import Menu from "./customer/menu";
 import Receipt from "./customer/receipt";
 import Food from "./customer/food";
+import Detail from "./customer/detail";
 import Drink from "./customer/drink";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import { BrowserView, MobileView } from "react-device-detect";
@@ -25,10 +26,10 @@ root.render(
 
           <Route path="/menu" element={<Menu />}></Route>
 
-          <Route path="/receipt" element={<Receipt />}></Route>
+          {/*<Route path="/receipt" element={<Receipt />}></Route>*/}
           <Route path="/menu/food" element={<Food />}></Route>
           <Route path="/menu/drink" element={<Drink />}></Route>
-          <Route path="/receipt" element={<Receipt />}></Route>
+          <Route path="/receipt" element={<Detail />}></Route>
         </Routes>
       </Router>
     </MobileView>
