@@ -1,6 +1,5 @@
 import "./mainCustomer.css";
 import { useNavigate } from "react-router-dom";
-// import { QRCodeCanvas } from "qrcode.react";
 
 function MainCustomer() {
   const navigate = useNavigate();
@@ -12,7 +11,6 @@ function MainCustomer() {
   };
   return (
     <div className="mainCustomer">
-      {/*<QRCodeCanvas value="https://reactjs.org/" />*/}
       <div className="mainCustomer_container">
         <img
           className="mainCustomer_image"
