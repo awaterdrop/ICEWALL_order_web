@@ -12,7 +12,7 @@ function Detail({ products }) {
       <Header />
       <h4 className="detail_name">{product.name}</h4>
       <h4 className="detail_name">{product.price}</h4>
-      <img className="detail_img" src="product.image" alt="" />
+      <img className="detail_img" src={product.image} alt="" />
 
       <div className="button_container">
         <button onClick={() => setValue(value - 1)}>-</button>
