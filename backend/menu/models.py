@@ -2,7 +2,7 @@ from django.conf import settings
 from django.db import models
 from django.core.files.storage import FileSystemStorage
 
-fs = FileSystemStorage(location='./media')
+fs = FileSystemStorage(location='./data/menu')
 
 
 class Menu(models.Model):
