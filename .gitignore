@@ -101,3 +101,5 @@ __pychache__/
 backend/media/
 
 migrations/
+
+.DS_Store
