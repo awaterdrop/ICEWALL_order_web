@@ -96,11 +96,13 @@ secrets.json
 
 # python cahce files
 *.pyc
-__pychache__/
+__pycache__/
 
 backend/media/
 backend/data/
 
 migrations/
 
+
 .DS_Store
+
