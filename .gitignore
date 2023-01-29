@@ -99,6 +99,7 @@ secrets.json
 __pychache__/
 
 backend/media/
+backend/data/
 
 migrations/
 
