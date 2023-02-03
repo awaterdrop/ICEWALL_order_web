@@ -1,13 +1,29 @@
-import Footer from "../components/footer/Footer";
+import React, { useState } from "react";
 import Header from "../components/header/Header";
-import Button from "../components/Button";
+import { useNavigate } from "react-router-dom";
+import Food from "./food";
+import "./menu.css";
+import { useDispatch, useSelector } from "react-redux";
 
 function Menu() {
+  const navigate = useNavigate();
+
+  let state = useSelector((state) => {
+    return state;
+  });
+
   return (
     <div>
       <Header />
-      <Button label="+" />
-      <Footer />
+      <div className="menu">
+        {/*{products.map((product) => (*/}
+        {/*  <Food product={product} key={product.id} />*/}
+        {/*))}*/}
+
+        {state.cart.map((a, i) => (
+          <Food product={state.cart[i]} id={i} key={i} />
+        ))}
+      </div>
     </div>
   );
 }
