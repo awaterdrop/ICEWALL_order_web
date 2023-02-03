@@ -1,8 +1,8 @@
 import React, { useState } from "react";
 import "./food.css";
 import { Link } from "react-router-dom";
+
 function Food({ product }) {
-  const [value, setValue] = useState(0);
   const { id, name, price, image, amount } = product;
 
   return (
@@ -18,8 +18,10 @@ function Food({ product }) {
             <small>가격</small>
             <strong>{price}</strong>
             <small>원</small>
-            <small>수량 {amount}</small>
           </p>
+          {/*<p className="food_amount">*/}
+          {/*  <small>수량 {amount}</small>*/}
+          {/*</p>*/}
         </div>
       </div>
     </div>

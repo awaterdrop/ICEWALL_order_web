@@ -28,7 +28,14 @@
     width: 100%;
     display: flex;
     flex-direction: column;
-    margin-left: 250%;
+    margin-left: 150%;
+}
+.food_amount{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    margin-left: 0%;
+
 }
 /*.food_img{*/
 /*    width: 30px;*/
