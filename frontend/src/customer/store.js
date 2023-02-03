@@ -1,5 +1,4 @@
 import { configureStore, createSlice } from "@reduxjs/toolkit";
-import user from "./store/userSlice";
 
 let cart = createSlice({
   name: "cart",
@@ -10,7 +9,6 @@ let cart = createSlice({
       price: 7000,
       image: "/img/woodong.jpeg",
       amount: 0,
-      totalPrice: 0,
     },
     {
       id: 1,
@@ -18,7 +16,6 @@ let cart = createSlice({
       price: 1000,
       image: "/img/water.jpeg",
       amount: 0,
-      totalPrice: 0,
     },
     {
       id: 2,
@@ -26,7 +23,6 @@ let cart = createSlice({
       price: 15000,
       image: "/img/wine.jpeg",
       amount: 0,
-      totalPrice: 0,
     },
     {
       id: 3,
@@ -34,23 +30,29 @@ let cart = createSlice({
       price: 4000,
       image: "/img/닭꼬치.jpeg",
       amount: 0,
-      totalPrice: 0,
     },
   ],
   reducers: {
-    addCount(state, action) {
-      state.findIndex((a) => {
-        return a.id === action.payload;
-      });
-      state[action.payload].count++;
+    addAmount(state, action) {
+      state[action.payload].amount++;
     },
-    addItem(state, action) {
-      state.push(action.payload);
+    minusAmount(state, action) {
+      state[action.payload].amount--;
+    },
+    setProduct(state, { payload }) {
+      state[payload.id].amount = state[payload.id].amount + payload.amount;
+    },
+    totalPrice(state) {
+      state.map(function (a, i) {
+        let totalPrice = totalPrice + state[i].amount * state[i].price;
+        console.log(totalPrice);
+        return totalPrice;
+      });
     },
   },
 });
 
-export let { addCount, addItem } = cart.actions;
+export let { addAmount, minusAmount, setProduct, totalPrice } = cart.actions;
 
 export default configureStore({
   reducer: {

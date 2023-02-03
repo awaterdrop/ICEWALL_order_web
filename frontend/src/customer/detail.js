@@ -2,27 +2,49 @@ import React, { useState } from "react";
 import Header from "../components/header/Header";
 import "./detail.css";
 import { useParams } from "react-router-dom";
+import { useDispatch, useSelector, useStore } from "react-redux";
+import { setProduct } from "./store";
 
-function Detail({ products }) {
+function Detail() {
   const params = useParams();
-  const product = products[params.id];
-  const [value, setValue] = useState(product.amount);
-  const [A, setA] = useState(product.totalPrice);
-  product.amount = value;
-  product.totalPrice = A;
+
+  let state = useSelector((state) => {
+    return state;
+  });
+
+  let product = state;
+  let dispatch = useDispatch();
+
+  let [temp, setTemp] = useState(0);
+
   return (
     <div className="detail">
       <Header />
-      <h4 className="detail_name">{product.name}</h4>
-      <h4 className="detail_name">{product.price}</h4>
-      <img className="detail_img" src={product.image} alt="" />
+      <h4 className="detail_name">{state.cart[params.id].name}</h4>
+      <h4 className="detail_name">{state.cart[params.id].price}</h4>
+      <img className="detail_img" src={state.cart[params.id].image} alt="" />
+
       <div className="button_container">
-        <button onClick={() => setValue(value - 1)}>-</button>
-        <p>수량 : {value}</p>
-        <button onClick={() => setValue(value + 1)}>+</button>
+        <button onClick={() => setTemp((temp = temp - 1))}>-</button>
+        <p>수량 : {temp}</p>
+        <button
+          onClick={() => {
+            setTemp((temp = temp + 1));
+          }}
+        >
+          +
+        </button>
       </div>
-      <button onClick={() => setA(product.price * value)}>장바구니 담기</button>
-      <h4>total price : {product.price * value}</h4>
+      <button
+        onClick={() => {
+          dispatch(setProduct({ id: params.id, amount: temp }));
+          setTemp(0);
+          alert("장바구니에 담겼습니다");
+        }}
+      >
+        장바구니 담기
+      </button>
+      <h4>total price :{state.cart[params.id].price * temp}</h4>
     </div>
   );
 }
