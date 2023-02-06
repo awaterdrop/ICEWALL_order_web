@@ -57,7 +57,8 @@ INSTALLED_APPS = [
     'user',
     'menu',
     'order',
-    'table'
+    'table',
+    'group'
 ]
 
 MIDDLEWARE = [
