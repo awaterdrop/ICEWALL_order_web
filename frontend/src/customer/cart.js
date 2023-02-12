@@ -3,8 +3,19 @@ import { useNavigate } from "react-router-dom";
 import Price from "./price";
 import { useSelector } from "react-redux";
 import "./cart.css";
+import { useEffect } from "react";
+
 function Cart() {
   const navigate = useNavigate();
+
+  const clickBasket = (arr) => {
+    // const baskets = JSON.parse(localStorage.getItem("baskets")) || [];
+    // baskets.push(arr);
+    useEffect(() => {
+      console.log(arr);
+      localStorage.setItem("baskets", JSON.stringify(arr));
+    });
+  };
   const clickMenu = () => {
     navigate("/menu");
   };
@@ -27,7 +38,9 @@ function Cart() {
           ))}
         </div>
         <h3 className="total_price">총가격: {totalPrice}</h3>
-        <button className="button_order">주문하기</button>
+        <button className="button_basket" onClick={clickBasket(state.cart)}>
+          주문하기
+        </button>
         <button className="button_order" onClick={clickMenu}>
           상품 더 담으러 가기
         </button>
