@@ -14,10 +14,13 @@ function App() {
     <Router>
       <Routes>
         <Route path="/" element={<MainCustomer />}></Route>
+
         <Route path="/menu" element={<Menu />}></Route>
+
+        {/*<Route path="/receipt" element={<Receipt />}></Route>*/}
         <Route path="/receipt" element={<Receipt />}></Route>
         <Route path="/detail/:id" element={<Detail />}></Route>
-        <Route path="/cart" element={<Cart />}></Route>=
+        <Route path="/cart" element={<Cart />}></Route>
       </Routes>
     </Router>
   );

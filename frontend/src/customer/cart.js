@@ -1,49 +1,42 @@
-import React from "react";
+import React, { useEffect } from "react";
 import Header from "../components/header/Header";
 import { useNavigate } from "react-router-dom";
 import Price from "./price";
 import { useDispatch, useSelector } from "react-redux";
-import { Table } from "react-bootstrap";
-import { totalPrice } from "./store";
 import "./cart.css";
-
 function Cart() {
   const navigate = useNavigate();
   const clickCart = () => {
     navigate("/cart");
   };
+  const clickMenu = () => {
+    navigate("/menu");
+  };
   let state = useSelector((state) => {
     return state;
   });
   let dispatch = useDispatch;
-
+  let sum = 0;
+  for (let i = 0; i < state.cart.length; i++) {
+    sum += state.cart[i].amount * state.cart[i].price;
+  }
   return (
-    <div>
-      <Header />
-      {/*<Table className="top">*/}
-      {/*  <thead>*/}
-      {/*    <tr>*/}
-      {/*      <th>#</th>*/}
-      {/*      <th>상품명</th>*/}
-      {/*      <th>상품가격</th>*/}
-      {/*      <th>변경하기</th>*/}
-      {/*    </tr>*/}
-      {/*  </thead>*/}
-      {/*</Table>*/}
+    <>
       <div className="cart">
-        {/*  {products.map((product) => (*/}
-        {/*    <Price product={product} key={product.id} />*/}
-        {/*  ))}*/}
-        {state.cart.map((a, i) => (
-          <Price id={i} key={i} />
-        ))}
+        <h1>장바구니</h1>
+        <hr />
+        <div className="product">
+          {state.cart.map((a, i) => (
+            <Price id={i} key={i} />
+          ))}
+        </div>
+        <h3 className="total_price">총가격: {sum}</h3>
+        <button className="button_order">주문하기</button>
+        <button className="button_order" onClick={clickMenu}>
+          상품 더 담으러 가기
+        </button>
       </div>
-      <h3>
-        <b>총가격:</b>
-        {dispatch(totalPrice())}
-      </h3>
-      <button>주문하기</button>
-    </div>
+    </>
   );
 }
 
