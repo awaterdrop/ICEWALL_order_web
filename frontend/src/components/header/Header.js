@@ -1,8 +1,12 @@
 import { Link } from "react-router-dom";
 import React from "react";
 import "./Header.css";
-import { AiOutlineShoppingCart } from "react-icons/ai";
+import { useNavigate } from "react-router-dom";
 function Header() {
+  const navigate = useNavigate();
+  const clickCart = () => {
+    navigate("/cart");
+  };
   return (
     <div className="header">
       <div className="home">
@@ -15,9 +19,7 @@ function Header() {
         </Link>
       </div>
       <div className="cart">
-        <Link to="/cart">
-          <AiOutlineShoppingCart className="cart_icon" />
-        </Link>
+        <div onClick={clickCart}>CART</div>
       </div>
     </div>
   );
