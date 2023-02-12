@@ -13,7 +13,9 @@
     width: 15%;
 }
 .product_price{
-    width:10%;
+    display: flex;
+    width:20px;
+    flex-wrap: wrap;
     text-align:center;
     align-items:center;
 }
@@ -23,4 +25,13 @@
     justify-content: space-evenly;
     text-align:center;
     align-items: flex-start;
+}
+.product_amount{
+    white-space:nowrap;
+    display: flex;
+    width:20px;
+    flex-wrap: wrap;
+    text-align:center;
+    align-items:center;
+
 }

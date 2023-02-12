@@ -4,7 +4,6 @@ import { useNavigate } from "react-router-dom";
 import Food from "./food";
 import "./menu.css";
 import { useDispatch, useSelector } from "react-redux";
-import { Table } from "react-bootstrap";
 
 function Menu() {
   const navigate = useNavigate();
@@ -14,18 +13,15 @@ function Menu() {
   });
 
   return (
-    <div>
+    <>
       <Header />
-      <Table>
-        <thead>
-          <tr>
-            <th className="image">상품사진</th>
-            <th>상품명</th>
-            <th>상품가격</th>
-          </tr>
-        </thead>
-      </Table>
-      <div className="menu">
+      <div className="title">
+        <div className="image">상품사진</div>
+        <div>상품명</div>
+        <div>상품가격</div>
+      </div>
+      <hr />
+      <div className="food">
         {/*{products.map((product) => (*/}
         {/*  <Food product={product} key={product.id} />*/}
         {/*))}*/}
@@ -34,7 +30,7 @@ function Menu() {
           <Food product={state.cart[i]} id={i} key={i} />
         ))}
       </div>
-    </div>
+    </>
   );
 }
 export default Menu;

@@ -2,10 +2,10 @@
     display: flex;
     justify-content: center;
     flex-direction: column;
+    font-family: Gugi;
 }
 
 .mainCustomer_title{
-    font-family: "Gugi";
     text-align: center;
     margin-top: 32px;
     font-size: 50px;

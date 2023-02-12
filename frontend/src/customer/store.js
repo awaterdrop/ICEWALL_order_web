@@ -15,14 +15,14 @@ let cart = createSlice({
       id: 1,
       name: "물",
       price: 1000,
-      image: "/img/water.jpeg",
+      image: "/img/water.png",
       amount: 0,
     },
     {
       id: 2,
       name: "와인",
       price: 15000,
-      image: "/img/wine.jpeg",
+      image: "/img/wine.png",
       amount: 0,
     },
     {
