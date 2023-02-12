@@ -1,7 +1,5 @@
 import React, { useState } from "react";
-import { Link } from "react-router-dom";
 import { useDispatch, useSelector } from "react-redux";
-import { addAmount, minusAmount } from "./store";
 import { Table } from "react-bootstrap";
 
 function Price({ id }) {

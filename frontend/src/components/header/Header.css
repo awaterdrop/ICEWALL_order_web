@@ -1,29 +1,25 @@
 .header{
     display: flex;
-    flex-direction: row;
-    justify-content: space-between;
+    justify-content: center;
     align-items: center;
-    /*height: 100px;*/
-    position: static;
-    top: 0;
 }
 .home{
+    flex:1;
     display: flex;
-    width:50%;
+    font-family: Gugi;
     justify-content: center;
 }
-.home_icon{
-    object-fit: contain;
-    width: 100px;
-    height: 100px;
-    margin-left:auto
-
+.logo{
+    flex:1;
+    display: flex;
+    font-family: Gugi;
+    justify-content: center;
 }
 .cart{
-    width:50%;
+    flex:1;
     display: flex;
-    flex-direction: row-reverse;
-    color: black;
     font-family: Gugi;
+    justify-content: center;
+  text-align: center;
 }
 

@@ -1,12 +1,8 @@
-import React, { useState } from "react";
-import { Link } from "react-router-dom";
 import { useDispatch, useSelector } from "react-redux";
 import { addAmount, minusAmount, deleteProduct } from "./store";
 import "./price.css";
 
 function Price({ id }) {
-  const [value, setValue] = useState(0);
-
   let state = useSelector((state) => {
     return state;
   });
@@ -64,10 +60,10 @@ function Price({ id }) {
     <>
       {state.cart[id].amount === 0 ? null : (
         <div className="price">
-          <p className="product_name">{state.cart[id].name}</p>
-          <p className="product_price">
+          <div className="product_name">{state.cart[id].name}</div>
+          <div className="product_price">
             {state.cart[id].price * state.cart[id].amount}
-          </p>
+          </div>
 
           <div className="button_container">
             <button
@@ -77,8 +73,9 @@ function Price({ id }) {
             >
               -
             </button>
-            <small>수량 </small>
-            <small>{state.cart[id].amount}</small>
+
+            <div className="product_amount">수량 </div>
+            <div className="product_amount">{state.cart[id].amount}</div>
             <button
               onClick={() => {
                 dispatch(addAmount(id));

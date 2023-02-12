@@ -1,8 +1,8 @@
 import Header from "../components/header/Header";
-import Footer from "../components/footer/Footer";
+
 import { useSelector } from "react-redux";
 import { Table } from "react-bootstrap";
-import Price from "./price";
+
 import React from "react";
 import PriceForReceipt from "./PriceForReceipt";
 
