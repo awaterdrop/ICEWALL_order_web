@@ -21,7 +21,7 @@ let cart = createSlice({
       id: 2,
       name: "와인",
       price: 15000,
-      image: "/img/wine.jpeg",
+      image: "/img/wine.png",
       amount: 0,
     },
     {
@@ -44,7 +44,7 @@ let cart = createSlice({
     },
     totalPrice(state) {
       state.map(function (a, i) {
-        let totalPrice = totalPrice + state[i].amount * state[i].price;
+        let totalPrice = +state[i].amount * state[i].price;
         console.log(totalPrice);
         return totalPrice;
       });

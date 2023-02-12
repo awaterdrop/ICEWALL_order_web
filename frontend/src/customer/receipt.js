@@ -5,7 +5,6 @@ function Receipt() {
   return (
     <div>
       <Header />
-      <Footer />
     </div>
   );
 }

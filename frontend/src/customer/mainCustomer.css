@@ -45,8 +45,3 @@
     margin-top:-150px;
     mask-image: linear-gradient(to bottom,rgba(0,0,0,1),rgba(0,0,0,0));
 }
-.qrCode{
-    width:40%;
-    margin-top: 30px;
-    margin-bottom: 40px;
-}

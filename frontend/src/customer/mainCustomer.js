@@ -27,7 +27,6 @@ function MainCustomer() {
           <h3>주문내역</h3>
         </button>
       </div>
-      <img className="qrCode" src="img/qrCode.webp" alt="" />
     </div>
   );
 }
