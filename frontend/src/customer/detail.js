@@ -25,7 +25,11 @@ function Detail() {
       <img className="detail_img" src={state.cart[params.id].image} alt="" />
 
       <div className="button_container">
-        <button onClick={() => setTemp((temp = temp - 1))}>-</button>
+        <button
+          onClick={() => setTemp((preNum) => (preNum <= 0 ? 0 : preNum - 1))}
+        >
+          -
+        </button>
         <p>수량 : {temp}</p>
         <button
           onClick={() => {
@@ -35,16 +39,25 @@ function Detail() {
           +
         </button>
       </div>
+
       <button
+        className="button_put"
         onClick={() => {
           dispatch(setProduct({ id: params.id, amount: temp }));
+          if (temp === 0) {
+            alert("수량을 확인해주세요");
+          } else {
+            alert("장바구니에 담겼습니다");
+          }
           setTemp(0);
-          alert("장바구니에 담겼습니다");
         }}
       >
         장바구니 담기
       </button>
-      <h4>total price :{state.cart[params.id].price * temp}</h4>
+      <p className="product_info">이 부분은 음식 설명입니다.</p>
+      <h4 className="product_info">
+        총 가격 :{state.cart[params.id].price * temp}
+      </h4>
     </div>
   );
 }

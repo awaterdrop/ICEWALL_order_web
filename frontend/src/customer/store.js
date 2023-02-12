@@ -9,6 +9,7 @@ let cart = createSlice({
       price: 7000,
       image: "/img/woodong.jpeg",
       amount: 0,
+      receiptAmount: 0,
     },
     {
       id: 1,
@@ -42,17 +43,13 @@ let cart = createSlice({
     setProduct(state, { payload }) {
       state[payload.id].amount = state[payload.id].amount + payload.amount;
     },
-    totalPrice(state) {
-      state.map(function (a, i) {
-        let totalPrice = totalPrice + state[i].amount * state[i].price;
-        console.log(totalPrice);
-        return totalPrice;
-      });
+    deleteProduct(state, action) {
+      state[action.payload].amount = 0;
     },
   },
 });
 
-export let { addAmount, minusAmount, setProduct, totalPrice } = cart.actions;
+export let { addAmount, minusAmount, setProduct, deleteProduct } = cart.actions;
 
 export default configureStore({
   reducer: {
