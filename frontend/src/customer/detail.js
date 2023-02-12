@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import Header from "../components/header/Header";
 import "./detail.css";
 import { useParams } from "react-router-dom";
-import { useDispatch, useSelector, useStore } from "react-redux";
+import { useDispatch, useSelector } from "react-redux";
 import { setProduct } from "./store";
 
 function Detail() {
@@ -12,7 +12,6 @@ function Detail() {
     return state;
   });
 
-  let product = state;
   let dispatch = useDispatch();
 
   let [temp, setTemp] = useState(0);
