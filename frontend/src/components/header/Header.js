@@ -2,7 +2,6 @@ import { Link } from "react-router-dom";
 import React from "react";
 import "./Header.css";
 import { useNavigate } from "react-router-dom";
-import { AiOutlineShoppingCart } from "react-icons/ai";
 function Header() {
   const navigate = useNavigate();
   const clickCart = () => {
@@ -20,10 +19,6 @@ function Header() {
         </Link>
       </div>
       <div className="cart">
-        {/*<Link to="/cart">*/}
-        {/*<AiOutlineShoppingCart className="cart_icon" />*/}
-
-        {/*</Link>*/}
         <div onClick={clickCart}>CART</div>
       </div>
     </div>
