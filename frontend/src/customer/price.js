@@ -73,7 +73,6 @@ function Price({ id }) {
             >
               -
             </button>
-
             <div className="product_amount">수량 </div>
             <div className="product_amount">{state.cart[id].amount}</div>
             <button
