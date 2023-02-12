@@ -1,23 +1,18 @@
 import Header from "../components/header/Header";
 import { useNavigate } from "react-router-dom";
 import Price from "./price";
-import { useSelector } from "react-redux";
+import { useDispatch, useSelector } from "react-redux";
 import "./cart.css";
+import { deleteProduct, setReceiptProduct } from "./store";
 import { useEffect } from "react";
-
 function Cart() {
+  let dispatch = useDispatch();
   const navigate = useNavigate();
-
-  const clickBasket = (arr) => {
-    // const baskets = JSON.parse(localStorage.getItem("baskets")) || [];
-    // baskets.push(arr);
-    useEffect(() => {
-      console.log(arr);
-      localStorage.setItem("baskets", JSON.stringify(arr));
-    });
-  };
   const clickMenu = () => {
     navigate("/menu");
+  };
+  const clickReceipt = () => {
+    navigate("/receipt");
   };
   let state = useSelector((state) => {
     return state;
@@ -26,6 +21,10 @@ function Cart() {
   for (let i = 0; i < state.cart.length; i++) {
     totalPrice += state.cart[i].amount * state.cart[i].price;
   }
+
+  useEffect(() => {
+    localStorage.setItem("cart", JSON.stringify(state.cart));
+  });
   return (
     <>
       <Header />
@@ -38,11 +37,23 @@ function Cart() {
           ))}
         </div>
         <h3 className="total_price">총가격: {totalPrice}</h3>
-        <button className="button_basket" onClick={clickBasket(state.cart)}>
+        <button
+          className="button_order"
+          onClick={() => {
+            for (let i = 0; i < state.cart.length; i++) {
+              dispatch(setReceiptProduct(i));
+              dispatch(deleteProduct(i));
+            }
+            alert("주문이 되었습니다");
+          }}
+        >
           주문하기
         </button>
         <button className="button_order" onClick={clickMenu}>
           상품 더 담으러 가기
+        </button>
+        <button className="button_order" onClick={clickReceipt}>
+          주문내역 보기
         </button>
       </div>
     </>

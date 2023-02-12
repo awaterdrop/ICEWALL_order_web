@@ -17,6 +17,7 @@ let cart = createSlice({
       price: 1000,
       image: "/img/water.png",
       amount: 0,
+      receiptAmount: 0,
     },
     {
       id: 2,
@@ -24,6 +25,7 @@ let cart = createSlice({
       price: 15000,
       image: "/img/wine.png",
       amount: 0,
+      receiptAmount: 0,
     },
     {
       id: 3,
@@ -31,6 +33,7 @@ let cart = createSlice({
       price: 4000,
       image: "/img/닭꼬치.jpeg",
       amount: 0,
+      receiptAmount: 0,
     },
   ],
   reducers: {
@@ -46,10 +49,19 @@ let cart = createSlice({
     deleteProduct(state, action) {
       state[action.payload].amount = 0;
     },
+    setReceiptProduct(state, action) {
+      state[action.payload].receiptAmount = state[action.payload].amount;
+    },
   },
 });
 
-export let { addAmount, minusAmount, setProduct, deleteProduct } = cart.actions;
+export let {
+  addAmount,
+  minusAmount,
+  setProduct,
+  deleteProduct,
+  setReceiptProduct,
+} = cart.actions;
 
 export default configureStore({
   reducer: {
