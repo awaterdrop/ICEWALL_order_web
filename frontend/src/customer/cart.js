@@ -3,7 +3,7 @@ import { useNavigate } from "react-router-dom";
 import Price from "./price";
 import { useDispatch, useSelector } from "react-redux";
 import "./cart.css";
-import { deleteProduct, setReceiptProduct } from "./store";
+import { deleteProduct, setReceiptProduct, setCart } from "./store";
 import { useEffect } from "react";
 function Cart() {
   let dispatch = useDispatch();
@@ -23,8 +23,12 @@ function Cart() {
   }
 
   useEffect(() => {
-    localStorage.setItem("cart", JSON.stringify(state.cart));
-  });
+    if (totalPrice !== 0) {
+      localStorage.setItem("cart", JSON.stringify(state.cart));
+    } else {
+      dispatch(setCart({ data: JSON.parse(localStorage.getItem("cart")) }));
+    }
+  }, [totalPrice]);
   return (
     <>
       <Header />
@@ -44,7 +48,9 @@ function Cart() {
               dispatch(setReceiptProduct(i));
               dispatch(deleteProduct(i));
             }
+
             alert("주문이 되었습니다");
+            clickReceipt();
           }}
         >
           주문하기
@@ -52,9 +58,9 @@ function Cart() {
         <button className="button_order" onClick={clickMenu}>
           상품 더 담으러 가기
         </button>
-        <button className="button_order" onClick={clickReceipt}>
-          주문내역 보기
-        </button>
+        {/*<button className="button_order" onClick={clickReceipt}>*/}
+        {/*  주문내역 보기*/}
+        {/*</button>*/}
       </div>
     </>
   );

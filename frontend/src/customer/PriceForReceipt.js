@@ -1,13 +1,9 @@
-import React, { useState } from "react";
-import { useDispatch, useSelector } from "react-redux";
+import { useSelector } from "react-redux";
 
 function Price({ id }) {
-  const [value, setValue] = useState(0);
-
   let state = useSelector((state) => {
     return state;
   });
-  let dispatch = useDispatch();
 
   return (
     <>

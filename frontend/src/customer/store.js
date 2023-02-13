@@ -52,6 +52,9 @@ let cart = createSlice({
     setReceiptProduct(state, action) {
       state[action.payload].receiptAmount = state[action.payload].amount;
     },
+    setCart(state, { payload }) {
+      return payload.data;
+    },
   },
 });
 
@@ -61,6 +64,7 @@ export let {
   setProduct,
   deleteProduct,
   setReceiptProduct,
+  setCart,
 } = cart.actions;
 
 export default configureStore({

@@ -7,8 +7,7 @@ import { setProduct } from "./store";
 
 function Detail() {
   const params = useParams();
-
-  let state = useSelector((state) => {
+  const state = useSelector((state) => {
     return state;
   });
 
