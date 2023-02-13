@@ -21,6 +21,7 @@ function Receipt() {
   return (
     <div>
       <Header />
+      <h1 className="h1">주문내역</h1>
       <div>
         <div className="receipt_title">
           <div>상품명</div>
