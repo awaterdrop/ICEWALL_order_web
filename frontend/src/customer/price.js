@@ -23,14 +23,16 @@ function Price({ id }) {
             {/*<div className="product_amount">수량 </div>*/}
             <div className="change_amount">
               <button
+                className="minus"
                 onClick={() => {
                   dispatch(minusAmount(id));
                 }}
               >
                 -
               </button>
-              <div>{state.cart[id].amount}</div>
+              <div className="num">{state.cart[id].amount}</div>
               <button
+                className="plus"
                 onClick={() => {
                   dispatch(addAmount(id));
                 }}

@@ -1,6 +1,6 @@
 import React from "react";
 
-function Maiㅌ₩ㅌ₩₩nAdmin() {
+function MainAdmin() {
   return (
     <div>
       <div>서빙</div>

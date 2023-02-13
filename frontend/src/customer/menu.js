@@ -15,7 +15,7 @@ function Menu() {
   return (
     <>
       <Header />
-      <div className="title">
+      <div className="menu_title">
         <div className="image">상품사진</div>
         <div>상품명</div>
         <div>상품가격</div>

@@ -5,7 +5,14 @@
     width:100%;
 }
 .title{
-    margin-right: 25%;
+    margin-top: 5%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+.title div{
+    flex:1;
 }
 .total_price{
     text-align: center;

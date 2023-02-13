@@ -38,6 +38,7 @@ function Cart() {
           <div>상품명</div>
           <div>상품개수</div>
           <div>수량</div>
+          <div>변경</div>
         </div>
         <hr />
         <div className="product">

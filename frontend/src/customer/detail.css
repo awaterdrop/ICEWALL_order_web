@@ -24,14 +24,13 @@
     flex-direction:row;
     width:100%;
 
-
 }
 
 .button_put{
     text-align: center;
     width: 50%;
     margin: 27px auto 0;
-
+    font-family: Gugi;
 
 }
 .product_info{

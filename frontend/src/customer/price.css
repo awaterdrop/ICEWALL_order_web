@@ -13,39 +13,25 @@
 .price_title div{
     flex:1;
 }
-/*.product_name{*/
-/*    white-space:nowrap;*/
-/*    text-align:center;*/
-/*    align-items: center;*/
-/*    width: 15%;*/
-/*}*/
-/*.product_price{*/
-/*    display: flex;*/
-/*    width:20px;*/
-/*    flex-wrap: wrap;*/
-/*    text-align:center;*/
-/*    align-items:center;*/
-/*}*/
 .button_container{
     flex:1;
     display:flex;
-    justify-content: space-evenly;
+    justify-content: center;
     text-align:center;
 }
 .change_amount{
     flex:1;
+    display:flex;
     flex-direction: row;
+    justify-content: center;
+}
+.change_amount div{
+    flex:1;
 }
 .delete{
     flex:1;
+    display:flex;
+    justify-content: center;
     align-items: center;
     width: 5%;
 }
-/*.product_amount{*/
-/*    white-space:nowrap;*/
-/*    display: flex;*/
-/*    width:20px;*/
-/*    flex-wrap: wrap;*/
-/*    text-align:center;*/
-/*    align-items:center;*/
-/*}*/
