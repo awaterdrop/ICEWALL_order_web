@@ -1,11 +1,11 @@
 import React from "react";
 
-function Maiㅌ₩ㅌ₩₩nAdmin() {
+function MainAdmin() {
   return (
     <div>
-      <div>서빙</div>
-      <div>요리</div>
-      <div>결제</div>
+      <button>서빙</button>
+      <button>요리</button>
+      <button>결제</button>
     </div>
   );
 }
