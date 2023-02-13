@@ -3,11 +3,18 @@
     flex-direction: column;
     justify-content: center;
     width:100%;
-
+}
+.title{
+    margin-right: 25%;
 }
 .total_price{
     text-align: center;
     margin-top: 27px;
+}
+.button_basket{
+    width: 50vw;
+    margin: 27px auto;
+    border-radius: 20px;
 }
 .button_order{
     width: 50vw;

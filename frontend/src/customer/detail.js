@@ -7,6 +7,7 @@ import { setProduct } from "./store";
 
 function Detail() {
   const params = useParams();
+
   const state = useSelector((state) => {
     return state;
   });
@@ -19,7 +20,7 @@ function Detail() {
     <div className="detail">
       <Header />
       <h4 className="detail_name">{state.cart[params.id].name}</h4>
-      <h4 className="detail_name">{state.cart[params.id].price}</h4>
+      <h4 className="detail_name">{state.cart[params.id].price}원</h4>
       <img className="detail_img" src={state.cart[params.id].image} alt="" />
 
       <div className="button_container">
@@ -54,7 +55,7 @@ function Detail() {
       </button>
       <p className="product_info">이 부분은 음식 설명입니다.</p>
       <h4 className="product_info">
-        총 가격 :{state.cart[params.id].price * temp}
+        총 가격: {state.cart[params.id].price * temp}원
       </h4>
     </div>
   );
