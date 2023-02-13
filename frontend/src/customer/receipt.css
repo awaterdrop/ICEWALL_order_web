@@ -1,0 +1,20 @@
+.receipt_title{
+    margin-top: 5%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    font-family: Gugi;
+}
+.receipt_title div{
+    flex:1;
+}
+.cart{
+    display: flex;
+    text-align: center;
+}
+.total{
+    font-family: Gugi;
+    margin-left: 10%;
+    margin-top: 10%;
+}

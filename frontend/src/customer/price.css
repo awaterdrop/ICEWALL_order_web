@@ -3,35 +3,49 @@
     flex-direction: row;
     justify-content: space-evenly;
     align-items: center;
-
 }
-
-.product_name{
-    white-space:nowrap;
-    text-align:center;
+.price_title{
+    flex:1;
+    display:flex;
+    justify-content: center;
     align-items: center;
-    width: 15%;
 }
-.product_price{
-    display: flex;
-    width:20px;
-    flex-wrap: wrap;
-    text-align:center;
-    align-items:center;
+.price_title div{
+    flex:1;
 }
+/*.product_name{*/
+/*    white-space:nowrap;*/
+/*    text-align:center;*/
+/*    align-items: center;*/
+/*    width: 15%;*/
+/*}*/
+/*.product_price{*/
+/*    display: flex;*/
+/*    width:20px;*/
+/*    flex-wrap: wrap;*/
+/*    text-align:center;*/
+/*    align-items:center;*/
+/*}*/
 .button_container{
-    margin-top: 0;
+    flex:1;
     display:flex;
     justify-content: space-evenly;
     text-align:center;
-    align-items: flex-start;
 }
-.product_amount{
-    white-space:nowrap;
-    display: flex;
-    width:20px;
-    flex-wrap: wrap;
-    text-align:center;
-    align-items:center;
-
+.change_amount{
+    flex:1;
+    flex-direction: row;
 }
+.delete{
+    flex:1;
+    align-items: center;
+    width: 5%;
+}
+/*.product_amount{*/
+/*    white-space:nowrap;*/
+/*    display: flex;*/
+/*    width:20px;*/
+/*    flex-wrap: wrap;*/
+/*    text-align:center;*/
+/*    align-items:center;*/
+/*}*/

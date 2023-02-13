@@ -30,13 +30,18 @@ function Cart() {
       <Header />
       <div className="cart">
         <h1>장바구니</h1>
+        <div className="title">
+          <div>상품명</div>
+          <div>상품개수</div>
+          <div>수량</div>
+        </div>
         <hr />
         <div className="product">
           {state.cart.map((a, i) => (
             <Price id={i} key={i} />
           ))}
         </div>
-        <h3 className="total_price">총가격: {totalPrice}</h3>
+        <h3 className="total_price">총가격: {totalPrice}원</h3>
         <button
           className="button_order"
           onClick={() => {

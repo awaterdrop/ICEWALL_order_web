@@ -3,7 +3,9 @@
     flex-direction: column;
     justify-content: center;
     width:100%;
-
+}
+.title{
+    margin-right: 25%;
 }
 .total_price{
     text-align: center;
