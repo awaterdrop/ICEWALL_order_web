@@ -50,13 +50,17 @@ function Cart() {
         <button
           className="button_order"
           onClick={() => {
-            for (let i = 0; i < state.cart.length; i++) {
-              dispatch(setReceiptProduct(i));
-              dispatch(deleteProduct(i));
-            }
+            if (totalPrice === 0) {
+              alert("장바구니에 물건을 담아주세요");
+            } else {
+              for (let i = 0; i < state.cart.length; i++) {
+                dispatch(setReceiptProduct(i));
+                dispatch(deleteProduct(i));
+              }
 
-            alert("주문이 되었습니다");
-            clickReceipt();
+              alert("주문이 되었습니다");
+              clickReceipt();
+            }
           }}
         >
           주문하기
