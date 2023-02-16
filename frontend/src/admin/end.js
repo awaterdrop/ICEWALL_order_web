@@ -1,7 +1,7 @@
 import React from "react";
 
 function End() {
-  return <div>결제 완료</div>;
+  return <div>마지막</div>;
 }
 
 export default End;

@@ -48,6 +48,7 @@ let cart = createSlice({
     },
     deleteProduct(state, action) {
       state[action.payload].amount = 0;
+      localStorage.setItem("cart", JSON.stringify(state));
     },
     setReceiptProduct(state, action) {
       state[action.payload].receiptAmount = state[action.payload].amount;

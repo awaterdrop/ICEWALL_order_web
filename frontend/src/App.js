@@ -13,7 +13,6 @@ import CreateTable from "./admin/createTable";
 import Cooking from "./admin/cooking";
 import Pay from "./admin/pay";
 import End from "./admin/end";
-
 function App() {
   return (
     <Router>
@@ -25,7 +24,7 @@ function App() {
         <Route path="/cart" element={<Cart />}></Route>
         <Route path="/admin" element={<MainAdmin />}></Route>
         <Route path="/login" element={<Login />}></Route>
-        <Route path="/signUp" element={<SignUp />}></Route>
+        <Route path="/signup" element={<SignUp />}></Route>
         <Route path="/serving" element={<Serving />}></Route>
         <Route path="/createTable" element={<CreateTable />}></Route>
         <Route path="/cooking" element={<Cooking />}></Route>
