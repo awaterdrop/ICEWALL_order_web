@@ -1,0 +1,14 @@
+.serving{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+}
+
+.create_button{
+    margin-top:32px;
+    width:200px;
+    height: 60px;
+    border-radius:20px;
+}
