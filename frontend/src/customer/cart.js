@@ -58,7 +58,7 @@ function Cart() {
                 dispatch(deleteProduct(i));
               }
 
-              alert("주문이 되었습니다");
+              alert("주문이 되었습니다. 주문내역으로 이동합니다.");
               clickReceipt();
             }
           }}
