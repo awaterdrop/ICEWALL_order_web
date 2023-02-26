@@ -1,0 +1,23 @@
+.main_admin{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+}
+.admin_buttons{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-top:40px;
+}
+
+.admin_button{
+    width:200px;
+    height: 60px;
+    margin-top:40px;
+    background-color: palegreen;
+    border-radius:20px;
+    border-color:darkolivegreen;
+}

@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import Header from "../components/header/Header";
+import HeaderForCustomer from "../components/header/HeaderForCustomer";
 import "./detail.css";
 import { useParams } from "react-router-dom";
 import { useDispatch, useSelector } from "react-redux";
@@ -18,7 +18,7 @@ function Detail() {
 
   return (
     <div className="detail">
-      <Header />
+      <HeaderForCustomer />
       <h4 className="detail_name">{state.cart[params.id].name}</h4>
       <h4 className="detail_name">{state.cart[params.id].price}원</h4>
       <img className="detail_img" src={state.cart[params.id].image} alt="" />

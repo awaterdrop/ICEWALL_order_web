@@ -1,0 +1,62 @@
+.createTable{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.table_buttons{
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    width: 80%;
+    margin-top:32px;
+    flex-wrap:wrap;
+}
+.table_button {
+    display: flex;
+    justify-content: space-evenly;
+    width: 80px;
+    height: 80px;
+    text-align: center;
+    align-items: center;
+    margin-top:12px;
+    margin-bottom:8px;
+}
+.table_button.active{
+    display: flex;
+    justify-content: space-evenly;
+    width: 80px;
+    height: 80px;
+    text-align: center;
+    align-items: center;
+    margin-top:12px;
+    margin-bottom:8px;
+    background-color: #12a512;
+}
+.table_button.using{
+    cursor: no-drop;
+    background: #ccc;
+}
+.selectedTableButton{
+    background-color: #12a512;
+    border:none;
+}
+
+.createTableButtonContainer{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+}
+.createTableButton{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-top:32px;
+    width:200px;
+    height: 60px;
+
+}

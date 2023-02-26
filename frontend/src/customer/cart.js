@@ -1,4 +1,4 @@
-import Header from "../components/header/Header";
+import HeaderForCustomer from "../components/header/HeaderForCustomer";
 import { useNavigate } from "react-router-dom";
 import Price from "./price";
 import { useDispatch, useSelector } from "react-redux";
@@ -31,7 +31,7 @@ function Cart() {
   }, [totalPrice]);
   return (
     <>
-      <Header />
+      <HeaderForCustomer />
       <div className="cart">
         <h1>장바구니</h1>
         <div className="title">

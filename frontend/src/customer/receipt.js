@@ -1,4 +1,4 @@
-import Header from "../components/header/Header";
+import HeaderForCustomer from "../components/header/HeaderForCustomer";
 import { useSelector } from "react-redux";
 import "./receipt.css";
 import React, { useEffect } from "react";
@@ -20,7 +20,7 @@ function Receipt() {
   }, []);
   return (
     <div>
-      <Header />
+      <HeaderForCustomer />
       <h1 className="h1">주문내역</h1>
       <div>
         <div className="receipt_title">
