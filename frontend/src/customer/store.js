@@ -196,6 +196,23 @@ let table = createSlice({
   },
 });
 
+let user = createSlice({
+  name: "user",
+  initialState: [
+    {
+      id: "",
+      pw: "",
+    },
+  ],
+  reducers: {
+    logInButton(state, { payload }) {
+      state[0].id = payload.id;
+      state[0].pw = payload.pw;
+    },
+    createUser(state, { payload }) {},
+  },
+});
+
 export let {
   addAmount,
   minusAmount,
@@ -205,9 +222,11 @@ export let {
   setCart,
 } = cart.actions;
 export let { setSelected, setUsing, setTableGroupID } = table.actions;
+export let { logInButton } = user.actions;
 export default configureStore({
   reducer: {
     cart: cart.reducer,
     table: table.reducer,
+    user: user.reducer,
   },
 });
