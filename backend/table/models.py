@@ -2,8 +2,9 @@ from django.db import models
 
 
 class Table(models.Model):
-    id = models.BigAutoField(help_text="Table ID", primary_key=True)
-    table_state = models.BooleanField(default=True)
+    id = models.PositiveSmallIntegerField(help_text="Table ID", primary_key=True)
+    state = models.BooleanField(default=False)
 
-    def __int__(self):
-        return self.id
+    def __str__(self):
+        return str(self.id)
+
