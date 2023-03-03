@@ -99,7 +99,10 @@ secrets.json
 __pycache__/
 
 backend/media/
+backend/data/
 
 migrations/
 
+
 .DS_Store
+
