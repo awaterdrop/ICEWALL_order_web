@@ -10,8 +10,9 @@ function CreateTable() {
   });
   let dispatch = useDispatch();
   console.log(state.table);
-  const [tableGroupId, setTableGroupId] = useState(1);
-
+  let [tableGroupId, setTableGroupId] = useState(1);
+  let num = Math.max(state.table.tableGroupId);
+  console.log(num);
   return (
     <>
       <div className="createTable">
@@ -50,7 +51,7 @@ function CreateTable() {
           className="createTableButton"
           onClick={() => {
             dispatch(setTableGroupID(tableGroupId));
-            setTableGroupId(tableGroupId + 1);
+            setTableGroupId((prevState) => prevState + 1);
             dispatch(setUsing());
           }}
         >

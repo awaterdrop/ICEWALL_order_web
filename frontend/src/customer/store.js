@@ -115,7 +115,7 @@ let table = createSlice({
       tableGroupId: 0,
       selected: 0,
       sharing: [1],
-      menu: [],
+      menu: ["라면", "라면", "참이슬"],
       totalPrice: 0,
     },
     {
@@ -204,6 +204,7 @@ export let {
   setReceiptProduct,
   setCart,
 } = cart.actions;
+
 export let { setSelected, setUsing, setTableGroupID } = table.actions;
 export default configureStore({
   reducer: {
