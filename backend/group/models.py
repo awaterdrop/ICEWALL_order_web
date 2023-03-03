@@ -1,3 +1,9 @@
 from django.db import models
 
-# Create your models here.
+
+class Group(models.Model):
+    id = models.PositiveSmallIntegerField(help_text="Group ID", primary_key=True)
+    tables_in_group = models.JSONField(default='{}')
+
+    def __int__(self):
+        return self.id
